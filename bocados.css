@@ -15,12 +15,12 @@ body {
 }
 
 .catalogoPrincipal {
-  width: 320px;
-  height: 241px;
+  width: 20%;
+  height: 240px;
+  border-radius: 50px;
   margin: 50px;
   background: #000000;
   box-sizing: border-box;
-  border-radius: 70px;
   border: 10px solid rgb(255, 196, 0);
   justify-content: space-evenly;
   overflow: hidden;
@@ -29,11 +29,9 @@ body {
 }
 @media (max-width: 600px) {
   .catalogoPrincipal {
-    width: 292px;
-  }
-  .catalogoPrincipal img {
-    max-width: 130%; /* Asegura que la imagen no sea más ancha que el botón */
-    max-height: 130%; /* Asegura que la imagen no sea más alta que el botón */
+    width: 290px;
+    height: 245px;
+    margin: 30px;
   }
 }
 .catalogoPrincipal img {
@@ -42,6 +40,7 @@ body {
   display: block; /* Evita el espacio en blanco debajo de la imagen */
   position: relative;
   left: -10%;
+  border-radius: 20px;
 }
 @media (max-width: 600px) {
   .catalogoPrincipal img {
@@ -55,13 +54,13 @@ body {
   transform-origin: center top;
   border: 10px solid rgb(0, 94, 255);
 }
-.catalogoPrincipal img:hover {
-  top: -40px;
+.catalogoPrincipal:hover img {
+  transform: translateY(-40px);
 }
 
 .finalPage {
   background: #484848;
-  width: 100%;
+  width: 99%;
   height: 241px;
   position: absolute;
   top: 1200px;
@@ -105,8 +104,8 @@ body {
     height: 240px;
     border-radius: 35px;
   }
-  .comidaIntoCat img:hover {
-    top: -115px;
+  .comidaIntoCat:hover img {
+    transform: translateY(-115px);
   }
   .comidaIntoCat:hover {
     width: 80%;
