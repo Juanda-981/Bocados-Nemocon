@@ -41,6 +41,7 @@ body {
   position: relative;
   left: -10%;
   border-radius: 20px;
+  transition: all 0.7s
 }
 @media (max-width: 600px) {
   .catalogoPrincipal img {
@@ -85,7 +86,7 @@ body {
 }
 .comidaIntoCat:hover {
   width: 85%; /* Aumenta la altura en el estado de hover */
-  height: 285px;
+  height: 550px;
   transform-origin: center top;
   border: 10px solid rgb(0, 94, 255);
 }
@@ -97,6 +98,10 @@ body {
   left: 0.5%;
   top: 0px;
   border-radius: 30px;
+  transition: all 0.7s
+}
+.comidaIntoCat:hover img {
+  top: -135px;
 }
 @media (max-width: 600px) {
   .comidaIntoCat img {
@@ -105,7 +110,7 @@ body {
     border-radius: 35px;
   }
   .comidaIntoCat:hover img {
-    transform: translateY(-115px);
+    transform: translateY(22px);
   }
   .comidaIntoCat:hover {
     width: 80%;
@@ -120,6 +125,7 @@ body {
   top: 35px;
   width: 50px;
   height: 50px;
+  z-index: 999;
 }
 
 .oppenInitSection {
@@ -130,21 +136,4 @@ body {
   top: 35px;
   width: 50px;
   height: 50px;
-}
-
-.InfFood {
-  background-color: #262626ba;
-  width: 1000px;
-  height: 500px;
-  border: 10px solid rgb(255, 196, 0);
-  border-radius: 30px;
-  z-index: 9999;
-  position: relative;
-  top: -360px;
-}
-.InfFood img {
-  position: absolute;
-  left: 18%;
-  width: 30%;
-  border-radius: 15px;
 }
