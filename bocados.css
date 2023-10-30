@@ -14,16 +14,21 @@ body {
   align-items: center; 
 }
 
+.textCatalPrin {
+  color: rgb(0, 94, 255);
+}
+
 .catalogoPrincipal {
   width: 20%;
   height: 240px;
   border-radius: 50px;
   margin: 50px;
-  background: #000000;
+  background-color: #000000b5;
   box-sizing: border-box;
   border: 10px solid rgb(255, 196, 0);
   justify-content: space-evenly;
   overflow: hidden;
+  z-index: 1;
   cursor: pointer;
   transition: all 0.7s
 }
@@ -74,15 +79,18 @@ body {
 
 .comidaIntoCat {
   width: 80%;
-  height: 275px;
+  height: 260px;
   border-radius: 50px;
   margin: 30px;
   color: rgb(255, 255, 255);
   background-color: #000000;
   border: 10px solid rgb(255, 196, 0);
   overflow: hidden;
+  clip-path: inset(0);
   cursor: pointer;
-  transition: all 0.7s
+  transition: all 0.7s;
+  position: relative;
+  left: 40px;
 }
 .comidaIntoCat:hover {
   width: 85%; /* Aumenta la altura en el estado de hover */
@@ -95,22 +103,22 @@ body {
   position: relative;
   width: 30%;
   height: 240px;
-  left: 0.5%;
-  top: 0px;
+  left: -34%;
+  top: 10px;
   border-radius: 30px;
   transition: all 0.7s
 }
-.comidaIntoCat:hover img {
-  top: -135px;
+@media (max-width: 600px) {
+  .comidaIntoCat {
+    left: 0px;
+  }
 }
 @media (max-width: 600px) {
   .comidaIntoCat img {
-    width: 100%;
+    width: 93%;
     height: 240px;
     border-radius: 35px;
-  }
-  .comidaIntoCat:hover img {
-    transform: translateY(22px);
+    left: 0px;
   }
   .comidaIntoCat:hover {
     width: 80%;
@@ -127,6 +135,11 @@ body {
   height: 50px;
   z-index: 999;
 }
+@media (max-width: 600px) {
+  .closecatalogo {
+    left: 2%;
+  }
+}
 
 .oppenInitSection {
   background-color: #09ff00;
@@ -136,4 +149,142 @@ body {
   top: 35px;
   width: 50px;
   height: 50px;
+}
+
+.agreePedid {
+  position: relative;
+  left: 0%;
+  top: 190px;
+  background-color: #09ff00;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+}
+@media (max-width: 600px) {
+  .agreePedid {
+    left: 0%;
+    top: 203px;
+    border-radius: 29px;
+    width: 292px;
+  }
+}
+
+#verPedido {
+  background-color: #000000;
+  border-radius: 30px;
+  position: fixed;
+  left: 88%;
+  top: 35px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgb(255, 94, 0);
+}
+#verPedido img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+#contentPedid {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 71%;
+  height: 585px;
+  border-radius: 25px;
+  top: 40px;
+  left: 15%;
+  z-index: 1;
+  border: 10px solid yellow;
+  overflow: auto;
+  background-color: rgba(77, 77, 77, 0.356);
+}
+
+#colseDivPedid {
+  background-color: #ff0000;
+  border-radius: 20px;
+  position: absolute;
+  left: 90%;
+  top: 35px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+}
+@media (max-width: 600px) {
+  #colseDivPedid {
+    left: 83%;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.box {
+  width: 80%;
+  border: 3px solid rgb(255, 255, 0);
+  border-radius: 25px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #000;
+  position: relative;
+  left: 5%;
+}
+@media (max-width: 600px) {
+  .box {
+    width: 72%;
+    height: 140px;
+    left: 1%;
+  }
+}
+
+.box img {
+  position: relative;
+  width: 150px;
+  margin-right: 10px;
+  display: flex;
+  border-radius: 25px;
+}
+@media (max-width: 600px) {
+  .box img {
+    display: flex;
+    width: 103px;
+    left: -7px;
+    top: -43px;
+    border-radius: 19px;
+  }
+}
+
+.delete-button {
+  position: relative;
+  left: 40%;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 19px;
+}
+@media (max-width: 600px) {
+  .delete-button {
+    left: -28%;
+    top: 50px;
+    border-radius: 19px;
+  }
+}
+
+.textDivCatPedid {
+  color: #fff700;
+  z-index: 30;
+  position: relative;
+  left: 10%;
+}
+@media (max-width: 600px) {
+  .textDivCatPedid {
+    left: -7%;
+    font-size: 15px;
+    top: -43px;
+  }
 }
