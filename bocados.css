@@ -164,8 +164,8 @@ body {
   .agreePedid {
     left: 0%;
     top: 203px;
-    border-radius: 29px;
-    width: 292px;
+    border-radius: 45px;
+    width: 93%;
   }
 }
 
@@ -269,7 +269,7 @@ body {
 }
 @media (max-width: 600px) {
   .delete-button {
-    left: -28%;
+    left: -70%;
     top: 50px;
     border-radius: 19px;
   }
