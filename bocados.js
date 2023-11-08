@@ -1,3 +1,13 @@
+let sectionFormulario = document.getElementById('secInitSection')
+sectionFormulario.style.display = 'none'
+let VerTipPedidos = document.getElementById('initSection')
+VerTipPedidos.addEventListener('click',oppenSeePedidos)
+
+function oppenSeePedidos () {
+    sectionFormulario.style.display = 'block'
+    secPrin.style.display = 'none'
+}
+
 let bottonVerPedid = document.getElementById('verPedido')
 bottonVerPedid.style.display = 'none'
 bottonVerPedid.addEventListener('click',verDivPedid)
@@ -2180,3 +2190,58 @@ function oppenCat6 () {
     intoCat6.style.display = 'block'
 }
 
+let seccionEditAliment = document.getElementById('seccionParaEditAlimet')
+seccionEditAliment.style.display = 'none'
+
+let seccionDeaministrador = document.getElementById('sectionAdministrador')
+seccionDeaministrador.style.display = 'none'
+
+function contraVerifi(){
+    let contraseña="."
+    let user="."
+
+    if(document.form.password.value==contraseña && document.form.login.value==user){
+        secPrin.style.display = 'none'
+        seccionDeaministrador.style.display = 'block'
+        sectionFormulario.style.display = 'none'
+    }
+    else{
+       alert("por favor ingresa nombre y usuario correctos")
+    }
+   }
+
+let bottonenterEditAliment = document.getElementById('editaliments')
+bottonenterEditAliment.addEventListener('click',oppenEdiAlimento)
+
+function oppenEdiAlimento () {
+    seccionEditAliment.style.display = 'block'
+    seccionDeaministrador.style.display = 'none'
+}
+
+let cerrarEditAli = document.getElementById('closeEditAli')
+cerrarEditAli.addEventListener('click',closeEditAliment)
+function closeEditAliment () {
+    seccionEditAliment.style.display = 'none'
+    seccionDeaministrador.style.display = 'block'
+}
+
+let salirDeAdmin = document.getElementById('salirDeAdmin')
+salirDeAdmin.addEventListener('click',salirDeAdministrador)
+function salirDeAdministrador () {
+    seccionDeaministrador.style.display = 'none'
+    secPrin.style.display = 'block'
+}
+
+const cargarImagenButton = document.getElementById('cargarImagen');
+const imageUrlInput = document.getElementById('imageUrlInput');
+const imagenSeccion1 = document.getElementById('imagen1Seccion1').querySelector('img');
+const imagenSeccion2 = document.getElementById('food1cat1').querySelector('img');
+
+cargarImagenButton.addEventListener('click', () => {
+    const imageUrl = imageUrlInput.value;
+    if (imageUrl) {
+        imagenSeccion1.src = imageUrl;
+        imagenSeccion2.src = imageUrl;
+        imagenSeccion2.parentElement.style.display = 'block';
+    }
+});

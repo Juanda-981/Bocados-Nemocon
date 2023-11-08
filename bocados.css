@@ -3,7 +3,7 @@ body {
     background-image:url('https://i.pinimg.com/750x/57/26/b8/5726b856f5af6aa0a06f745db706a6fb.jpg');
     background-repeat: repeat; 
   } 
-
+  
 .titulo {
   color: rgb(255, 196, 0);
   font-size: 72px;
@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+  text-shadow: 9px 2px 5px rgba(0, 102, 255, 0.5);
 }
 
 .textCatalPrin {
@@ -287,4 +288,147 @@ body {
     font-size: 15px;
     top: -43px;
   }
+}
+#Formulario {
+  background-color: rgba(52, 52, 52, 0.386);
+  position: absolute;
+  left: 30%;
+  top: 225px;
+  display: flex;
+
+  align-items: center;
+  width: 40%;
+  height: 65vh;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px 0 rgb(0, 162, 255);
+}
+.espacioContraseña {
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.526);
+  padding: 20px;
+  color: rgb(0, 162, 255);
+  margin: 10px;
+  border: 3px solid rgb(0, 162, 255);
+  position: relative;
+  top: -95px;
+}
+.espacioUsuario {
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.526);
+  padding: 20px;
+  color: rgb(0, 162, 255);
+  margin: 10px;
+  border: 3px solid rgb(0, 162, 255);
+  position: relative;
+  top: -95px;
+}
+.buttonInitSec {
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  color: rgb(26, 255, 0);
+  margin: 10px;
+  border: 3px solid rgb(26, 255, 0);
+  position: relative;
+  top: 60px;
+  left: -35%;
+}
+
+.ButtonssecionDministrador {
+  color: white;
+  border: 5px solid rgb(255, 230, 0);
+  background-color: rgba(119, 119, 119, 0.651);
+  position: absolute;
+  width: 22%;
+  height: 162px;
+  border-radius: 35px;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+#editaliments {
+  left: 27%;
+  top: 197px;
+}
+.ButtonssecionDministrador:hover {
+  transform: scale(1.1);
+}
+
+.divDeEditar {
+  width: 80%;
+  height: 260px;
+  border-radius: 50px;
+  margin: 30px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border: 10px solid rgb(255, 196, 0);
+  overflow: hidden;
+  clip-path: inset(0);
+  position: relative;
+  left: 40px;
+  clip-path: inset(0);
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.divDeEditar:hover {
+  height: 400px;
+  transform-origin: center top;
+  border: 10px solid rgb(0, 94, 255);
+}
+
+.imagenDeEdit {
+  display: flex;
+  position: relative;
+  width: 30%;
+  height: 240px;
+  left: 1%;
+  top: 10px;
+  border-radius: 30px;
+}
+
+#closeEditAli {
+  background-color: #ff0000;
+  border-radius: 20px;
+  position: fixed;
+  left: 6%;
+  top: 35px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+}
+
+#salirDeAdmin {
+  background-color: #ff0000;
+  border-radius: 20px;
+  position: fixed;
+  left: 6%;
+  top: 35px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+}
+
+.espacioDeUrl {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: rgb(0, 162, 255);
+  position: relative;
+  top: 15px;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(0, 162, 255);
+}
+.butonCargaUrl {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: rgb(0, 162, 255);
+  position: relative;
+  top: 15px;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(0, 162, 255);
 }
