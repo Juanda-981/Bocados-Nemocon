@@ -33,10 +33,10 @@ body {
   cursor: pointer;
   transition: all 0.7s
 }
-@media (max-width: 600px) {
+@media (max-width: 1500px) {
   .catalogoPrincipal {
     width: 290px;
-    height: 245px;
+    height: 226px;
     margin: 30px;
   }
 }
@@ -46,11 +46,13 @@ body {
   display: block; /* Evita el espacio en blanco debajo de la imagen */
   position: relative;
   left: -10%;
+  top: -1%;
   border-radius: 20px;
   transition: all 0.7s
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .catalogoPrincipal img {
+    top: -1%;
     max-width: 130%; /* Asegura que la imagen no sea más ancha que el botón */
     max-height: 130%; /* Asegura que la imagen no sea más alta que el botón */
     left: -45px;
@@ -371,7 +373,7 @@ body {
   transition: all 0.7s;
 }
 .divDeEditar:hover {
-  height: 400px;
+  height: 600px;
   transform-origin: center top;
   border: 10px solid rgb(0, 94, 255);
 }
@@ -410,7 +412,7 @@ body {
 
 .espacioDeUrl {
   background-color: rgba(0, 0, 0, 0.525);
-  color: rgb(0, 162, 255);
+  color: #07617d;
   position: relative;
   top: 15px;
   border-radius: 25px;
@@ -418,11 +420,11 @@ body {
   margin: 10px;
   border-width: 3px;
   border-style: solid;
-  border-color: rgb(0, 162, 255);
+  border-color: #07617d;
 }
 .butonCargaUrl {
   background-color: rgba(0, 0, 0, 0.525);
-  color: rgb(0, 162, 255);
+  color: #07617d;
   position: relative;
   top: 15px;
   border-radius: 25px;
@@ -430,5 +432,100 @@ body {
   margin: 10px;
   border-width: 3px;
   border-style: solid;
-  border-color: rgb(0, 162, 255);
+  border-color: #07617d;
+}
+
+.espacioDePrecio {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: #eb2632;
+  position: relative;
+  top: 85px;
+  left: -32.5%;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #eb2632;
+}
+
+.butonPrecio {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: #eb2632;
+  position: relative;
+  top: 85px;
+  left: -32.5%;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #eb2632;
+}
+
+.espacioDeNombre {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: #f0ab8d;
+  position: relative;
+  top: 153px;
+  left: -64.5%;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #f0ab8d;
+}
+
+.butonNombre {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: #f0ab8d;
+  position: relative;
+  top: 153px;
+  left: -64.5%;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #f0ab8d;
+}
+
+.espacioDeContenidoalimento {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: #8109b7;
+  position: relative;
+  top: 145px;
+  left: 0%;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #8109b7;
+}
+
+.butonContenidoalimento {
+  background-color: rgba(0, 0, 0, 0.525);
+  color: #8109b7;
+  position: relative;
+  top: 145px;
+  left: 0%;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #8109b7;
+}
+
+.divSpaceImageEdit {
+  display: flex;
+  position: relative;
+  width: 30%;
+  height: 240px;
+  left: 1%;
+  top: -396px;
+  border-radius: 30px;
+  border: 5px solid rgb(0, 162, 255);
 }

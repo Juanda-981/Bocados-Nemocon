@@ -1,0 +1,22 @@
+{
+  "name": "bocados-nemocon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bocados.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Juanda-981/Bocados-Nemocon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juanda-981/Bocados-Nemocon/issues"
+  },
+  "homepage": "https://github.com/Juanda-981/Bocados-Nemocon#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
