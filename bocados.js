@@ -2245,3 +2245,70 @@ cargarImagenButton.addEventListener('click', () => {
         imagenSeccion2.parentElement.style.display = 'block';
     }
 });
+
+function actualizarPrecio1Cat1() {
+    // Obtener el valor del input
+    var nuevoPrecio = document.getElementById("precioInput1Cat1").value;
+
+    // Actualizar solo la parte numérica de los elementos con clase 'precio'
+    document.getElementById("valor1Cat1").innerText = nuevoPrecio;
+    document.getElementById("valor1Cat1Edit").innerText = nuevoPrecio;
+}
+
+function actualizarNombre1Cta1() {
+    // Obtener el valor del input
+    var nuevoPrecio = document.getElementById("nombreInput").value;
+
+    // Actualizar solo la parte numérica de los elementos con clase 'precio'
+    document.getElementById("Nombre1Cat1").innerText = nuevoPrecio;
+    document.getElementById("Nombre1Cat1Edit").innerText = nuevoPrecio;
+}
+
+
+
+let ingredients = [];
+
+function addIngredient() {
+  const ingredientInput = document.getElementById('ContentAlimento');
+  const ingredient = ingredientInput.value.trim();
+
+  if (ingredient !== '') {
+    ingredients.push(ingredient);
+    updateIngredientList();
+    updateFoodList();
+    ingredientInput.value = '';
+  }
+}
+
+function deleteIngredient(index) {
+  ingredients.splice(index, 1);
+  updateIngredientList();
+  updateFoodList();
+}
+
+function updateIngredientList() {
+  const ingredientList = document.getElementById('ingredient-list');
+  ingredientList.innerHTML = '';
+
+  ingredients.forEach((ingredient, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient} `;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
+    deleteButton.onclick = () => deleteIngredient(index);
+    li.appendChild(deleteButton);
+    ingredientList.appendChild(li);
+  });
+}
+
+function updateFoodList() {
+  const foodList = document.getElementById('food-list');
+  foodList.innerHTML = '';
+
+  ingredients.forEach((ingredient) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient}`;
+    foodList.appendChild(li);
+  });
+}

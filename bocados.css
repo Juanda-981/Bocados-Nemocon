@@ -493,7 +493,7 @@ body {
 
 .espacioDeContenidoalimento {
   background-color: rgba(0, 0, 0, 0.525);
-  color: #8109b7;
+  color: #ab00fa;
   position: relative;
   top: 145px;
   left: 0%;
@@ -502,12 +502,12 @@ body {
   margin: 10px;
   border-width: 3px;
   border-style: solid;
-  border-color: #8109b7;
+  border-color: #ab00fa;
 }
 
 .butonContenidoalimento {
   background-color: rgba(0, 0, 0, 0.525);
-  color: #8109b7;
+  color: #ab00fa;
   position: relative;
   top: 145px;
   left: 0%;
@@ -516,7 +516,7 @@ body {
   margin: 10px;
   border-width: 3px;
   border-style: solid;
-  border-color: #8109b7;
+  border-color: #ab00fa;
 }
 
 .divSpaceImageEdit {
@@ -527,5 +527,73 @@ body {
   left: 1%;
   top: -396px;
   border-radius: 30px;
-  border: 5px solid rgb(0, 162, 255);
+  border: 5px solid #07617d;
+}
+
+.textPriceFood {
+  position: relative;
+  top: -195px;
+}
+
+.nombre1Cat1 {
+  position: relative;
+  top: -321px;
+  left: 5%;
+  font-size: 135%;
+}
+
+.precioEdit1Cat1 {
+  position: relative;
+  color: #eb2632;
+  top: -543px;
+  left: 50%;
+  font-size: 135%;
+}
+
+.nombreEdit1Cat1 {
+  position: relative;
+  color: #f0ab8d;
+  top: -675px;
+  left: 41%;
+  font-size: 135%;
+}
+
+
+
+
+.delete-button {
+  background-color: #d2d2d200; /* Color rojo para el botón eliminar */
+  color: #ab00fa; /* Texto blanco */
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  margin-left: 10px;
+  position: relative;
+  left: 0%;
+  border: 3px solid #ab00fa;
+}
+
+.delete-button:hover {
+  background-color: #ab00fa57; /* Cambiar el color al pasar el ratón */
+}
+
+
+
+.editIngredient1Cat1{
+  color: #ab00fa;
+  position: relative;
+  left: 50%;
+  top: -500px;
+}
+li {
+  margin-bottom: 10px;
+}
+
+.ingredienteAgree {
+  color: #ffd900;
+  position: relative;
+  left: -41%;
+  top: -150px;
+  z-index: 99;
 }
