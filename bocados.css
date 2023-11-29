@@ -2,17 +2,21 @@ body {
     font-size: 20px;
     background-image:url('https://i.pinimg.com/750x/57/26/b8/5726b856f5af6aa0a06f745db706a6fb.jpg');
     background-repeat: repeat; 
-  } 
+} 
   
 .titulo {
-  color: rgb(255, 196, 0);
   font-size: 72px;
   font-family: 'Fredoka One', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  text-shadow: 9px 2px 5px rgba(0, 102, 255, 0.5);
+  color: transparent; /* Color del texto */
+  font-size: 9rem;
+  background-image: url(https://i.gifer.com/3Nt.gif);
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px rgb(255, 247, 0);
 }
 
 .textCatalPrin {
@@ -260,7 +264,7 @@ body {
   }
 }
 
-.delete-button {
+.delete-button-miniDiv {
   position: relative;
   left: 40%;
   background-color: red;

@@ -235,15 +235,16 @@ function agregarDiv1Cat1() {
     divCount++;
 
     const image = document.createElement('img');
-    image.src = 'https://i.pinimg.com/564x/e9/cc/ef/e9ccefa1343e2a269b8189fded7235f7.jpg'; 
+    image.src = imageUrlInput.value; 
 
     const text = document.createElement('p');
     text.className = 'textDivCatPedid';
-    text.textContent = 'hola mundo de hamburguesas 1, ' + divCount;
+    text.textContent = inputNombre1Cat1.value;
+    text.id = "textMiniDivCompra1Cat1";
 
     const deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Borrar';
-    deleteButton.className = 'delete-button';
+    deleteButton.className = 'delete-button-miniDiv';
     deleteButton.addEventListener('click', function() {
         container.removeChild(div);
         divCount--;
@@ -328,7 +329,7 @@ function agregarDiv4Cat1() {
     image.src = 'https://i.pinimg.com/564x/e9/cc/ef/e9ccefa1343e2a269b8189fded7235f7.jpg'; 
 
     const text = document.createElement('p');
-    text.className = 'textDivCatPedid';
+    text.className = '';
     text.textContent = 'hola mundo de hamburguesas 4,' + divCount;
 
     const deleteButton = document.createElement('button');
@@ -2257,14 +2258,13 @@ function actualizarPrecio1Cat1() {
 
 function actualizarNombre1Cta1() {
     // Obtener el valor del input
-    var nuevoPrecio = document.getElementById("nombreInput").value;
-
-    // Actualizar solo la parte numérica de los elementos con clase 'precio'
-    document.getElementById("Nombre1Cat1").innerText = nuevoPrecio;
-    document.getElementById("Nombre1Cat1Edit").innerText = nuevoPrecio;
+    var nuevoNombre = document.getElementById("nombreInput1cat1").value;
+    // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
+    document.getElementById("Nombre1Cat1").innerText = nuevoNombre;
+    document.getElementById("Nombre1Cat1Edit").innerText = nuevoNombre;
 }
 
-
+let inputNombre1Cat1 = document.getElementById("nombreInput1cat1")
 
 let ingredients = [];
 
