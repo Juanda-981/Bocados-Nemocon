@@ -235,12 +235,17 @@ function agregarDiv1Cat1() {
     divCount++;
 
     const image = document.createElement('img');
-    image.src = imageUrlInput.value; 
+    image.src = imageUrlInput1de1.value; 
 
     const text = document.createElement('p');
     text.className = 'textDivCatPedid';
     text.textContent = inputNombre1Cat1.value;
     text.id = "textMiniDivCompra1Cat1";
+
+    const textPrecio = document.createElement('p')
+    textPrecio.className = 'textDivCatPedidPrecio';
+    textPrecio.textContent = "$ " + inputPrecio1Cat1.value;
+    textPrecio.id = "textMiniDivCompra1Cat1Precio";
 
     const deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Borrar';
@@ -252,6 +257,7 @@ function agregarDiv1Cat1() {
 
     div.appendChild(image);
     div.appendChild(text);
+    div.appendChild(textPrecio);
     div.appendChild(deleteButton);
     container.appendChild(div);
     container.scrollTop = container.scrollHeight; // Desplaza el contenedor hacia abajo
@@ -2233,13 +2239,13 @@ function salirDeAdministrador () {
     secPrin.style.display = 'block'
 }
 
-const cargarImagenButton = document.getElementById('cargarImagen');
-const imageUrlInput = document.getElementById('imageUrlInput');
-const imagenSeccion1 = document.getElementById('imagen1Seccion1').querySelector('img');
+const cargarImagen1de1Button = document.getElementById('cargarImagen1cat1');
+const imageUrlInput1de1 = document.getElementById('imageUrlInput1Cat1');
+const imagenSeccion1 = document.getElementById('divDeEditar1com1').querySelector('img');
 const imagenSeccion2 = document.getElementById('food1cat1').querySelector('img');
 
-cargarImagenButton.addEventListener('click', () => {
-    const imageUrl = imageUrlInput.value;
+cargarImagen1de1Button.addEventListener('click', () => {
+    const imageUrl = imageUrlInput1de1.value;
     if (imageUrl) {
         imagenSeccion1.src = imageUrl;
         imagenSeccion2.src = imageUrl;
@@ -2247,14 +2253,17 @@ cargarImagenButton.addEventListener('click', () => {
     }
 });
 
+
 function actualizarPrecio1Cat1() {
     // Obtener el valor del input
-    var nuevoPrecio = document.getElementById("precioInput1Cat1").value;
+    var nuevoPrecio1de1 = document.getElementById("precioInput1Cat1").value;
 
     // Actualizar solo la parte numérica de los elementos con clase 'precio'
-    document.getElementById("valor1Cat1").innerText = nuevoPrecio;
-    document.getElementById("valor1Cat1Edit").innerText = nuevoPrecio;
+    document.getElementById("valor1Cat1").innerText = nuevoPrecio1de1;
+    document.getElementById("valor1Cat1Edit").innerText = nuevoPrecio1de1;
 }
+
+let inputPrecio1Cat1 = document.getElementById("precioInput1Cat1")
 
 function actualizarNombre1Cta1() {
     // Obtener el valor del input
@@ -2266,33 +2275,33 @@ function actualizarNombre1Cta1() {
 
 let inputNombre1Cat1 = document.getElementById("nombreInput1cat1")
 
-let ingredients = [];
+let ingredients1cat1 = [];
 
-function addIngredient() {
-  const ingredientInput = document.getElementById('ContentAlimento');
-  const ingredient = ingredientInput.value.trim();
+function addIngredient1cat1() {
+  const ingredientInput1de1 = document.getElementById('ContentAlimento1cat1');
+  const ingredient1catal1 = ingredientInput1de1.value.trim();
 
-  if (ingredient !== '') {
-    ingredients.push(ingredient);
+  if (ingredient1catal1 !== '') {
+    ingredients1cat1.push(ingredient1catal1);
     updateIngredientList();
-    updateFoodList();
-    ingredientInput.value = '';
+    updateFoodList1de1();
+    ingredientInput1de1.value = '';
   }
 }
 
 function deleteIngredient(index) {
-  ingredients.splice(index, 1);
+  ingredients1cat1.splice(index, 1);
   updateIngredientList();
-  updateFoodList();
+  updateFoodList1de1();
 }
 
 function updateIngredientList() {
   const ingredientList = document.getElementById('ingredient-list');
   ingredientList.innerHTML = '';
 
-  ingredients.forEach((ingredient, index) => {
+  ingredients1cat1.forEach((ingredient1catal1, index) => {
     const li = document.createElement('li');
-    li.textContent = `${ingredient} `;
+    li.textContent = `${ingredient1catal1} `;
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
@@ -2302,13 +2311,126 @@ function updateIngredientList() {
   });
 }
 
-function updateFoodList() {
-  const foodList = document.getElementById('food-list');
-  foodList.innerHTML = '';
+function updateFoodList1de1() {
+  const foodList1de1 = document.getElementById('food-list1cat1');
+  foodList1de1.innerHTML = '';
 
-  ingredients.forEach((ingredient) => {
+  ingredients1cat1.forEach((ingredient1catal1) => {
     const li = document.createElement('li');
-    li.textContent = `${ingredient}`;
-    foodList.appendChild(li);
+    li.textContent = `${ingredient1catal1}`;
+    foodList1de1.appendChild(li);
   });
 }
+
+const cargarImagen2de1Button = document.getElementById('cargarImagen2cat1');
+const imageUrlInput2de1 = document.getElementById('imageUrlInput2Cat1');
+const imagen2Seccion1 = document.getElementById('divDeEditar1com2').querySelector('img');
+const imagen2Seccion2 = document.getElementById('food2cat1').querySelector('img');
+
+cargarImagen2de1Button.addEventListener('click', () => {
+    const imageUrl = imageUrlInput2de1.value;
+    if (imageUrl) {
+        imagen2Seccion1.src = imageUrl;
+        imagen2Seccion2.src = imageUrl;
+        imagen2Seccion2.parentElement.style.display = 'block';
+    }
+});
+
+function actualizarPrecio2Cat1() {
+    // Obtener el valor del input
+    var nuevoPrecio2de1 = document.getElementById("precioInput2Cat1").value;
+
+    // Actualizar solo la parte numérica de los elementos con clase 'precio'
+    document.getElementById("valor2Cat1").innerText = nuevoPrecio2de1;
+    document.getElementById("valor2Cat1Edit").innerText = nuevoPrecio2de1;
+}
+
+let inputPrecio2Cat1 = document.getElementById("precioInput2Cat1")
+
+function actualizarNombre2Cta1() {
+    // Obtener el valor del input
+    var nuevoNombre2de1 = document.getElementById("nombreInput2cat1").value;
+    // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
+    document.getElementById("Nombre2Cat1").innerText = nuevoNombre2de1;
+    document.getElementById("Nombre2Cat1Edit").innerText = nuevoNombre2de1;
+}
+
+let inputNombre2Cat1 = document.getElementById("nombreInput2cat1")
+
+let ingredients2cat1 = [];
+
+function addIngredient2cat1() {
+  const ingredientInput2de1 = document.getElementById('ContentAlimento2cat1');
+  const ingrediente2catal1 = ingredientInput2de1.value.trim();
+
+  if (ingrediente2catal1 !== '') {
+    ingredients2cat1.push(ingrediente2catal1);
+    updateIngredientList2decat1();
+    foodList2de1();
+    ingredientInput2de1.value = '';
+  }
+}
+
+function deleteIngredient(index) {
+  ingredients2cat1.splice(index, 1);
+  updateIngredientList2decat1();
+  foodList2de1();
+}
+
+function updateIngredientList2decat1() {
+  const ingredientList2cat1 = document.getElementById('ingredient-list2de1');
+  ingredientList2cat1.innerHTML = '';
+
+  ingredients2cat1.forEach((ingredient2catal1, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient2catal1} `;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
+    deleteButton.onclick = () => deleteIngredient(index);
+    li.appendChild(deleteButton);
+    ingredientList2cat1.appendChild(li);
+  });
+}
+
+function foodList2de1() {
+  const foodList2de1 = document.getElementById('food-list2cat1');
+  foodList2de1.innerHTML = '';
+
+  ingredients2cat1.forEach((ingredient2catal1) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient2catal1}`;
+    foodList2de1.appendChild(li);
+  });
+}
+
+function toggleDiv() {
+    var toggleButton = document.getElementById('toggleButton');
+
+    if (abrirInfo1Cat1.style.display === 'none') {
+      // Si el div está oculto, mostrarlo y cambiar el texto del botón a 'x'
+      abrirInfo1Cat1.style.display = 'block';
+      toggleButton.textContent = '✕';
+    } else {
+      // Si el div está visible, ocultarlo y cambiar el texto del botón a 'chulo'
+      abrirInfo1Cat1.style.display = 'none';
+      toggleButton.textContent = '✓';
+    }
+
+    // Agregamos o quitamos la clase 'rotate' para aplicar la animación de giro
+    toggleButton.classList.toggle('rotate');
+  }
+
+function iniciarPedido() {
+    fetch("http://localhost:8080/unirse")
+         .then(function (res) {
+             if (res.ok) {
+                res.text()
+                .then(function (respuesta) {
+                    console.log(respuesta)
+                })
+             }
+         })
+}
+
+window.addEventListener('load', iniciarPedido)

@@ -5,18 +5,14 @@ body {
 } 
   
 .titulo {
+  color: rgb(255, 196, 0);
   font-size: 72px;
   font-family: 'Fredoka One', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  color: transparent; /* Color del texto */
-  font-size: 9rem;
-  background-image: url(https://i.gifer.com/3Nt.gif);
-  background-size: contain;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 1px rgb(255, 247, 0);
+  text-shadow: 9px 2px 5px rgba(0, 102, 255, 0.5);
 }
 
 .textCatalPrin {
@@ -287,6 +283,13 @@ body {
   z-index: 30;
   position: relative;
   left: 10%;
+}
+
+.textDivCatPedidPrecio {
+  color: #fff700;
+  z-index: 30;
+  position: relative;
+  left: 20%;
 }
 @media (max-width: 600px) {
   .textDivCatPedid {
@@ -600,4 +603,23 @@ li {
   left: -41%;
   top: -150px;
   z-index: 99;
+}
+
+.botongirador {
+background-color: rgba(0, 0, 0, 0.525);
+color: #00c3ff;
+position: relative;
+top: -844px;
+left: 93%;
+border-radius: 25px;
+padding: 20px;
+margin: 10px;
+border-width: 3px;
+border-style: solid;
+border-color: #00c3ff;
+cursor: pointer;
+transition: transform 0.5s ease; /* Ajustamos la duración de la animación a 0.5 segundos */
+}
+.rotate {
+  transform: rotate(360deg);
 }
