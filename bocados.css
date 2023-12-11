@@ -601,7 +601,7 @@ li {
   color: #ffd900;
   position: relative;
   left: -41%;
-  top: -150px;
+  top: -115px;
   z-index: 99;
 }
 
@@ -622,4 +622,20 @@ transition: transform 0.5s ease; /* Ajustamos la duración de la animación a 0.
 }
 .rotate {
   transform: rotate(360deg);
+}
+
+.bottonEnterEdit {
+  width: 20%;
+  height: 240px;
+  border-radius: 50px;
+  margin: 50px;
+  background-color: #424242b5;
+  box-sizing: border-box;
+  border: 10px solid rgb(255, 255, 255);
+  justify-content: space-evenly;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  left: 10%;
 }
