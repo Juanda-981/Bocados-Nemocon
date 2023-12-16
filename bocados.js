@@ -2255,18 +2255,17 @@ function salirDeAdministrador () {
 
 const cargarImagen1de1Button = document.getElementById('cargarImagen1cat1');
 const imageUrlInput1de1 = document.getElementById('imageUrlInput1Cat1');
-const imagenSeccion1 = document.getElementById('divDeEditar1com1').querySelector('img');
-const imagenSeccion2 = document.getElementById('food1cat1').querySelector('img');
+const imagen1Seccion1 = document.getElementById('divDeEditar1com1').querySelector('img');
+const imagen1Seccion2 = document.getElementById('food1cat1').querySelector('img');
 
 cargarImagen1de1Button.addEventListener('click', () => {
     const imageUrl = imageUrlInput1de1.value;
     if (imageUrl) {
-        imagenSeccion1.src = imageUrl;
-        imagenSeccion2.src = imageUrl;
-        imagenSeccion2.parentElement.style.display = 'block';
+        imagen1Seccion1.src = imageUrl;
+        imagen1Seccion1.src = imageUrl;
+        imagen1Seccion1.parentElement.style.display = 'block';
     }
 });
-
 
 function actualizarPrecio1Cat1() {
     // Obtener el valor del input
@@ -2281,10 +2280,10 @@ let inputPrecio1Cat1 = document.getElementById("precioInput1Cat1")
 
 function actualizarNombre1Cta1() {
     // Obtener el valor del input
-    var nuevoNombre = document.getElementById("nombreInput1cat1").value;
+    var nuevoNombre1de1 = document.getElementById("nombreInput1cat1").value;
     // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
-    document.getElementById("Nombre1Cat1").innerText = nuevoNombre;
-    document.getElementById("Nombre1Cat1Edit").innerText = nuevoNombre;
+    document.getElementById("Nombre1Cat1").innerText = nuevoNombre1de1;
+    document.getElementById("Nombre1Cat1Edit").innerText = nuevoNombre1de1;
 }
 
 let inputNombre1Cat1 = document.getElementById("nombreInput1cat1")
@@ -2293,25 +2292,25 @@ let ingredients1cat1 = [];
 
 function addIngredient1cat1() {
   const ingredientInput1de1 = document.getElementById('ContentAlimento1cat1');
-  const ingredient1catal1 = ingredientInput1de1.value.trim();
+  const ingrediente1catal1 = ingredientInput1de1.value.trim();
 
-  if (ingredient1catal1 !== '') {
-    ingredients1cat1.push(ingredient1catal1);
-    updateIngredientList();
-    updateFoodList1de1();
+  if (ingrediente1catal1 !== '') {
+    ingredients1cat1.push(ingrediente1catal1);
+    updateIngredientList1decat1();
+    foodList1de1();
     ingredientInput1de1.value = '';
   }
 }
 
 function deleteIngredient(index) {
   ingredients1cat1.splice(index, 1);
-  updateIngredientList();
-  updateFoodList1de1();
+  updateIngredientList1decat1();
+  foodList1de1();
 }
 
-function updateIngredientList() {
-  const ingredientList = document.getElementById('ingredient-list');
-  ingredientList.innerHTML = '';
+function updateIngredientList1decat1() {
+  const ingredientList1cat1 = document.getElementById('ingredient-list1de1');
+  ingredientList1cat1.innerHTML = '';
 
   ingredients1cat1.forEach((ingredient1catal1, index) => {
     const li = document.createElement('li');
@@ -2321,11 +2320,11 @@ function updateIngredientList() {
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
     deleteButton.onclick = () => deleteIngredient(index);
     li.appendChild(deleteButton);
-    ingredientList.appendChild(li);
+    ingredientList1cat1.appendChild(li);
   });
 }
 
-function updateFoodList1de1() {
+function foodList1de1() {
   const foodList1de1 = document.getElementById('food-list1cat1');
   foodList1de1.innerHTML = '';
 
@@ -2333,88 +2332,6 @@ function updateFoodList1de1() {
     const li = document.createElement('li');
     li.textContent = `${ingredient1catal1}`;
     foodList1de1.appendChild(li);
-  });
-}
-
-const cargarImagen2de1Button = document.getElementById('cargarImagen2cat1');
-const imageUrlInput2de1 = document.getElementById('imageUrlInput2Cat1');
-const imagen2Seccion1 = document.getElementById('divDeEditar1com2').querySelector('img');
-const imagen2Seccion2 = document.getElementById('food2cat1').querySelector('img');
-
-cargarImagen2de1Button.addEventListener('click', () => {
-    const imageUrl = imageUrlInput2de1.value;
-    if (imageUrl) {
-        imagen2Seccion1.src = imageUrl;
-        imagen2Seccion2.src = imageUrl;
-        imagen2Seccion2.parentElement.style.display = 'block';
-    }
-});
-
-function actualizarPrecio2Cat1() {
-    // Obtener el valor del input
-    var nuevoPrecio2de1 = document.getElementById("precioInput2Cat1").value;
-
-    // Actualizar solo la parte numérica de los elementos con clase 'precio'
-    document.getElementById("valor2Cat1").innerText = nuevoPrecio2de1;
-    document.getElementById("valor2Cat1Edit").innerText = nuevoPrecio2de1;
-}
-
-let inputPrecio2Cat1 = document.getElementById("precioInput2Cat1")
-
-function actualizarNombre2Cta1() {
-    // Obtener el valor del input
-    var nuevoNombre2de1 = document.getElementById("nombreInput2cat1").value;
-    // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
-    document.getElementById("Nombre2Cat1").innerText = nuevoNombre2de1;
-    document.getElementById("Nombre2Cat1Edit").innerText = nuevoNombre2de1;
-}
-
-let inputNombre2Cat1 = document.getElementById("nombreInput2cat1")
-
-let ingredients2cat1 = [];
-
-function addIngredient2cat1() {
-  const ingredientInput2de1 = document.getElementById('ContentAlimento2cat1');
-  const ingrediente2catal1 = ingredientInput2de1.value.trim();
-
-  if (ingrediente2catal1 !== '') {
-    ingredients2cat1.push(ingrediente2catal1);
-    updateIngredientList2decat1();
-    foodList2de1();
-    ingredientInput2de1.value = '';
-  }
-}
-
-function deleteIngredient(index) {
-  ingredients2cat1.splice(index, 1);
-  updateIngredientList2decat1();
-  foodList2de1();
-}
-
-function updateIngredientList2decat1() {
-  const ingredientList2cat1 = document.getElementById('ingredient-list2de1');
-  ingredientList2cat1.innerHTML = '';
-
-  ingredients2cat1.forEach((ingredient2catal1, index) => {
-    const li = document.createElement('li');
-    li.textContent = `${ingredient2catal1} `;
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Eliminar';
-    deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
-    li.appendChild(deleteButton);
-    ingredientList2cat1.appendChild(li);
-  });
-}
-
-function foodList2de1() {
-  const foodList2de1 = document.getElementById('food-list2cat1');
-  foodList2de1.innerHTML = '';
-
-  ingredients2cat1.forEach((ingredient2catal1) => {
-    const li = document.createElement('li');
-    li.textContent = `${ingredient2catal1}`;
-    foodList2de1.appendChild(li);
   });
 }
 
@@ -2502,7 +2419,7 @@ function foodList3de1() {
 
 const cargarImagen4de1Button = document.getElementById('cargarImagen4cat1');
 const imageUrlInput4de1 = document.getElementById('imageUrlInput4Cat1');
-const imagen4Seccion1 = document.getElementById('divDeEditar1co4').querySelector('img');
+const imagen4Seccion1 = document.getElementById('divDeEditar1com4').querySelector('img');
 const imagen4Seccion2 = document.getElementById('food4cat1').querySelector('img');
 
 cargarImagen4de1Button.addEventListener('click', () => {
@@ -3074,69 +2991,71 @@ function foodList10de1() {
     });
 }
 
-const cargarImagen1de2Button = document.getElementById('cargarImagen1cat2');
-const imageUrlInput1de2 = document.getElementById('imageUrlInput1Cat2');
-const imagen1Seccion1 = document.getElementById('divDeEditar2com1').querySelector('img');
-const imagen1Seccion2 = document.getElementById('food1cat2').querySelector('img');
+ 
 
-cargarImagen1de2Button.addEventListener('click', () => {
-    const imageUrl = imageUrlInput1de2.value;
+const cargarImagen2de2Button = document.getElementById('cargarImagen2cat2');
+const imageUrlInput2de2 = document.getElementById('imageUrlInput2Cat2');
+const imagen2Seccion1cat2 = document.getElementById('divDeEditar2com2').querySelector('img');
+const imagen2Seccion2cat2 = document.getElementById('food2cat2').querySelector('img');
+
+cargarImagen2de2Button.addEventListener('click', () => {
+    const imageUrl = imageUrlInput2de2.value;
     if (imageUrl) {
-        imagen1Seccion1.src = imageUrl;
-        imagen1Seccion2.src = imageUrl;
-        imagen1Seccion2.parentElement.style.display = 'block';
+        imagen2Seccion1cat2.src = imageUrl;
+        imagen2Seccion2cat2.src = imageUrl;
+        imagen2Seccion2cat2.parentElement.style.display = 'block';
     }
 });
 
 
-function actualizarPrecio1Cat2() {
+function actualizarPrecio2Cat2() {
     // Obtener el valor del input
-    var nuevoPrecio1de2 = document.getElementById("precioInput1Cat2").value;
+    var nuevoPrecio2de2 = document.getElementById("precioInput2Cat2").value;
 
     // Actualizar solo la parte numérica de los elementos con clase 'precio'
-    document.getElementById("valor1Cat2").innerText = nuevoPrecio1de2;
-    document.getElementById("valor1Cat2Edit").innerText = nuevoPrecio1de2;
+    document.getElementById("valor2Cat2").innerText = nuevoPrecio2de2;
+    document.getElementById("valor2Cat2Edit").innerText = nuevoPrecio2de2;
 }
 
-let inputPrecio1Cat2 = document.getElementById("precioInput1Cat2")
+let inputPrecio2Cat2 = document.getElementById("precioInput2Cat2")
 
-function actualizarNombre1Cta2() {
+function actualizarNombre2Cta2() {
     // Obtener el valor del input
-    var nuevoNombre = document.getElementById("nombreInput1cat2").value;
+    var nuevoNombre = document.getElementById("nombreInput2cat2").value;
     // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
-    document.getElementById("Nombre1Cat2").innerText = nuevoNombre;
-    document.getElementById("Nombre1Cat2Edit").innerText = nuevoNombre;
+    document.getElementById("Nombre2Cat2").innerText = nuevoNombre;
+    document.getElementById("Nombre2Cat2Edit").innerText = nuevoNombre;
 }
 
-let inputNombre1Cat2 = document.getElementById("nombreInput1cat2")
+let inputNombre2Cat2 = document.getElementById("nombreInput2cat2")
 
-let ingredients1cat2 = [];
+let ingredients2cat2 = [];
 
-function addIngredient1cat2() {
-  const ingredientInput1de2 = document.getElementById('ContentAlimento1cat2');
-  const ingredient1catal2 = ingredientInput1de2.value.trim();
+function addIngredient2cat2() {
+  const ingredientInput2de2 = document.getElementById('ContentAlimento2cat2');
+  const ingredient2catal2 = ingredientInput2de2.value.trim();
 
-  if (ingredient1catal2 !== '') {
-    ingredients1cat2.push(ingredient1catal2);
+  if (ingredient2catal2 !== '') {
+    ingredients2cat2.push(ingredient2catal2);
     updateIngredientList();
-    updateFoodList1de2();
-    ingredientInput1de2.value = '';
+    updateFoodList2de2();
+    ingredientInput2de2.value = '';
   }
 }
 
 function deleteIngredient(index) {
-  ingredients1cat2.splice(index, 1);
+  ingredients2cat2.splice(index, 2);
   updateIngredientList();
-  updateFoodList1de2();
+  updateFoodList2de2();
 }
 
 function updateIngredientList() {
-  const ingredientList = document.getElementById('ingredient-list1de2');
+  const ingredientList = document.getElementById('ingredient-list2de2');
   ingredientList.innerHTML = '';
 
-  ingredients1cat2.forEach((ingredient1catal2, index) => {
+  ingredients2cat2.forEach((ingredient2catal2, index) => {
     const li = document.createElement('li');
-    li.textContent = `${ingredient1catal2} `;
+    li.textContent = `${ingredient2catal2} `;
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
@@ -3146,17 +3065,182 @@ function updateIngredientList() {
   });
 }
 
-function updateFoodList1de2() {
-  const foodList1de2 = document.getElementById('food-list1cat2');
-  foodList1de2.innerHTML = '';
+function updateFoodList2de2() {
+  const foodList2de2 = document.getElementById('food-list2cat2');
+  foodList2de2.innerHTML = '';
 
-  ingredients1cat2.forEach((ingredient1catal2) => {
+  ingredients2cat2.forEach((ingredient2catal2) => {
     const li = document.createElement('li');
-    li.textContent = `${ingredient1catal2}`;
-    foodList1de2.appendChild(li);
+    li.textContent = `${ingredient2catal2}`;
+    foodList2de2.appendChild(li);
   });
 }
 
+const cargarImagen3de2Button = document.getElementById('cargarImagen3cat2');
+const imageUrlInput3de2 = document.getElementById('imageUrlInput3Cat2');
+const imagen3Seccion3 = document.getElementById('divDeEditar2com3').querySelector('img');
+const imagen3Seccion2cat2 = document.getElementById('food3cat2').querySelector('img');
+
+cargarImagen3de2Button.addEventListener('click', () => {
+    const imageUrl = imageUrlInput3de2.value;
+    if (imageUrl) {
+        imagen3Seccion3.src = imageUrl;
+        imagen3Seccion2cat2.src = imageUrl;
+        imagen3Seccion2cat2.parentElement.style.display = 'block';
+    }
+});
+
+
+function actualizarPrecio3Cat2() {
+    // Obtener el valor del input
+    var nuevoPrecio3de2 = document.getElementById("precioInput3Cat2").value;
+
+    // Actualizar solo la parte numérica de los elementos con clase 'precio'
+    document.getElementById("valor3Cat2").innerText = nuevoPrecio3de2;
+    document.getElementById("valor3Cat2Edit").innerText = nuevoPrecio3de2;
+}
+
+let inputPrecio3Cat2 = document.getElementById("precioInput3Cat2")
+
+function actualizarNombre3Cta2() {
+    // Obtener el valor del input
+    var nuevoNombre = document.getElementById("nombreInput3cat2").value;
+    // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
+    document.getElementById("Nombre3Cat2").innerText = nuevoNombre;
+    document.getElementById("Nombre3Cat2Edit").innerText = nuevoNombre;
+}
+
+let inputNombre3Cat2 = document.getElementById("nombreInput3cat2")
+
+let ingredients3cat2 = [];
+
+function addIngredient3cat2() {
+  const ingredientInput3de2 = document.getElementById('ContentAlimento3cat2');
+  const ingredient3catal2 = ingredientInput3de2.value.trim();
+
+  if (ingredient3catal2 !== '') {
+    ingredients3cat2.push(ingredient3catal2);
+    updateIngredientList();
+    updateFoodList3de2();
+    ingredientInput3de2.value = '';
+  }
+}
+
+function deleteIngredient(index) {
+  ingredients3cat2.splice(index, 3);
+  updateIngredientList();
+  updateFoodList3de2();
+}
+
+function updateIngredientList() {
+  const ingredientList = document.getElementById('ingredient-list3de2');
+  ingredientList.innerHTML = '';
+
+  ingredients3cat2.forEach((ingredient3catal2, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient3catal2} `;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
+    deleteButton.onclick = () => deleteIngredient(index);
+    li.appendChild(deleteButton);
+    ingredientList.appendChild(li);
+  });
+}
+
+function updateFoodList3de2() {
+  const foodList3de2 = document.getElementById('food-list3cat2');
+  foodList3de2.innerHTML = '';
+
+  ingredients3cat2.forEach((ingredient3catal2) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient3catal2}`;
+    foodList3de2.appendChild(li);
+  });
+}
+
+const cargarImagen4de2Button = document.getElementById('cargarImagen4cat2');
+const imageUrlInput4de2 = document.getElementById('imageUrlInput4Cat2');
+const imagen4Seccion1cat2 = document.getElementById('divDeEditar2com4').querySelector('img');
+const imagen4Seccion2cat2 = document.getElementById('food4cat2').querySelector('img');
+
+cargarImagen4de2Button.addEventListener('click', () => {
+    const imageUrl = imageUrlInput4de2.value;
+    if (imageUrl) {
+        imagen4Seccion1cat2.src = imageUrl;
+        imagen4Seccion2cat2.src = imageUrl;
+        imagen4Seccion2cat2.parentElement.style.display = 'block';
+    }
+});
+
+
+function actualizarPrecio4Cat2() {
+    // Obtener el valor del input
+    var nuevoPrecio4de2 = document.getElementById("precioInput4Cat2").value;
+
+    // Actualizar solo la parte numérica de los elementos con clase 'precio'
+    document.getElementById("valor4Cat2").innerText = nuevoPrecio4de2;
+    document.getElementById("valor4Cat2Edit").innerText = nuevoPrecio4de2;
+}
+
+let inputPrecio4Cat2 = document.getElementById("precioInput4Cat2")
+
+function actualizarNombre4Cta2() {
+    // Obtener el valor del input
+    var nuevoNombre = document.getElementById("nombreInput4cat2").value;
+    // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
+    document.getElementById("Nombre4Cat2").innerText = nuevoNombre;
+    document.getElementById("Nombre4Cat2Edit").innerText = nuevoNombre;
+}
+
+let inputNombre4Cat2 = document.getElementById("nombreInput4cat2")
+
+let ingredients4cat2 = [];
+
+function addIngredient4cat2() {
+  const ingredientInput4de2 = document.getElementById('ContentAlimento4cat2');
+  const ingredient4catal2 = ingredientInput4de2.value.trim();
+
+  if (ingredient4catal2 !== '') {
+    ingredients4cat2.push(ingredient4catal2);
+    updateIngredientList();
+    updateFoodList4de2();
+    ingredientInput4de2.value = '';
+  }
+}
+
+function deleteIngredient(index) {
+  ingredients4cat2.splice(index, 4);
+  updateIngredientList();
+  updateFoodList4de2();
+}
+
+function updateIngredientList() {
+  const ingredientList = document.getElementById('ingredient-list4de2');
+  ingredientList.innerHTML = '';
+
+  ingredients4cat2.forEach((ingredient4catal2, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient4catal2} `;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
+    deleteButton.onclick = () => deleteIngredient(index);
+    li.appendChild(deleteButton);
+    ingredientList.appendChild(li);
+  });
+}
+
+function updateFoodList4de2() {
+  const foodList4de2 = document.getElementById('food-list4cat2');
+  foodList4de2.innerHTML = '';
+
+  ingredients4cat2.forEach((ingredient4catal2) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient4catal2}`;
+    foodList4de2.appendChild(li);
+  });
+}
 
 let editarAlimentodelcat1 = document.getElementById('editAlimentCat1')
 editarAlimentodelcat1.style.display = 'none'
