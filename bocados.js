@@ -2302,9 +2302,9 @@ function addIngredient1cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient1delCat1(index) {
   ingredients1cat1.splice(index, 1);
-  updateIngredientList1decat1();
+  updateIngredientList1decat1(); 
   foodList1de1();
 }
 
@@ -2318,7 +2318,7 @@ function updateIngredientList1decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient1delCat1(index);
     li.appendChild(deleteButton);
     ingredientList1cat1.appendChild(li);
   });
@@ -2332,6 +2332,88 @@ function foodList1de1() {
     const li = document.createElement('li');
     li.textContent = `${ingredient1catal1}`;
     foodList1de1.appendChild(li);
+  });
+}
+
+const cargarImagen2de1Button = document.getElementById('cargarImagen2cat1');
+const imageUrlInput2de1 = document.getElementById('imageUrlInput2Cat1');
+const imagen2Seccion1 = document.getElementById('divDeEditar1com2').querySelector('img');
+const imagen2Seccion2 = document.getElementById('food2cat1').querySelector('img');
+
+cargarImagen2de1Button.addEventListener('click', () => {
+    const imageUrl = imageUrlInput2de1.value;
+    if (imageUrl) {
+        imagen2Seccion1.src = imageUrl;
+        imagen2Seccion2.src = imageUrl;
+        imagen2Seccion2.parentElement.style.display = 'block';
+    }
+});
+
+function actualizarPrecio2Cat1() {
+    // Obtener el valor del input
+    var nuevoPrecio2de1 = document.getElementById("precioInput2Cat1").value;
+
+    // Actualizar solo la parte numérica de los elementos con clase 'precio'
+    document.getElementById("valor2Cat1").innerText = nuevoPrecio2de1;
+    document.getElementById("valor2Cat1Edit").innerText = nuevoPrecio2de1;
+}
+
+let inputPrecio2Cat1 = document.getElementById("precioInput2Cat1")
+
+function actualizarNombre2Cta1() {
+    // Obtener el valor del input
+    var nuevoNombre2de1 = document.getElementById("nombreInput2cat1").value;
+    // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
+    document.getElementById("Nombre2Cat1").innerText = nuevoNombre2de1;
+    document.getElementById("Nombre2Cat1Edit").innerText = nuevoNombre2de1;
+}
+
+let inputNombre2Cat1 = document.getElementById("nombreInput2cat1")
+
+let ingredients2cat1 = [];
+
+function addIngredient2cat1() {
+  const ingredientInput2de1 = document.getElementById('ContentAlimento2cat1');
+  const ingrediente2catal1 = ingredientInput2de1.value.trim();
+
+  if (ingrediente2catal1 !== '') {
+    ingredients2cat1.push(ingrediente2catal1);
+    updateIngredientList2decat1();
+    foodList2de1();
+    ingredientInput2de1.value = '';
+  }
+}
+
+function deleteIngredient2delCat1(index) {
+  ingredients2cat1.splice(index, 1);
+  updateIngredientList2decat1();
+  foodList2de1();
+}
+
+function updateIngredientList2decat1() {
+  const ingredientList2cat1 = document.getElementById('ingredient-list2de1');
+  ingredientList2cat1.innerHTML = '';
+
+  ingredients2cat1.forEach((ingredient2catal1, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient2catal1} `;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
+    deleteButton.onclick = () => deleteIngredient2delCat1(index);
+    li.appendChild(deleteButton);
+    ingredientList2cat1.appendChild(li);
+  });
+}
+
+function foodList2de1() {
+  const foodList2de1 = document.getElementById('food-list2cat1');
+  foodList2de1.innerHTML = '';
+
+  ingredients2cat1.forEach((ingredient2catal1) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient2catal1}`;
+    foodList2de1.appendChild(li);
   });
 }
 
@@ -2384,7 +2466,7 @@ function addIngredient3cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient3delCat1(index) {
   ingredients3cat1.splice(index, 1);
   updateIngredientList3decat1();
   foodList3de1();
@@ -2400,7 +2482,7 @@ function updateIngredientList3decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient3delCat1(index);
     li.appendChild(deleteButton);
     ingredientList3cat1.appendChild(li);
   });
@@ -2466,7 +2548,7 @@ function addIngredient4cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient4delCat1(index) {
   ingredients4cat1.splice(index, 1);
   updateIngredientList4decat1();
   foodList4de1();
@@ -2482,7 +2564,7 @@ function updateIngredientList4decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient4delCat1(index);
     li.appendChild(deleteButton);
     ingredientList4cat1.appendChild(li);
   });
@@ -2548,7 +2630,7 @@ function addIngredient5cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient5delCat1(index) {
   ingredients5cat1.splice(index, 1);
   updateIngredientList5decat1();
   foodList5de1();
@@ -2564,7 +2646,7 @@ function updateIngredientList5decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient5delCat1(index);
     li.appendChild(deleteButton);
     ingredientList5cat1.appendChild(li);
   });
@@ -2630,7 +2712,7 @@ function addIngredient6cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient6delCat1(index) {
   ingredients6cat1.splice(index, 1);
   updateIngredientList6decat1();
   foodList6de1();
@@ -2646,7 +2728,7 @@ function updateIngredientList6decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient6delCat1(index);
     li.appendChild(deleteButton);
     ingredientList6cat1.appendChild(li);
   });
@@ -2712,7 +2794,7 @@ function addIngredient7cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient7delCat1(index) {
   ingredients7cat1.splice(index, 1);
   updateIngredientList7decat1();
   foodList7de1();
@@ -2728,7 +2810,7 @@ function updateIngredientList7decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient7delCat1(index);
     li.appendChild(deleteButton);
     ingredientList7cat1.appendChild(li);
   });
@@ -2794,7 +2876,7 @@ function addIngredient8cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient8delCat1(index) {
   ingredients8cat1.splice(index, 1);
   updateIngredientList8decat1();
   foodList8de1();
@@ -2810,7 +2892,7 @@ function updateIngredientList8decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient8delCat1(index);
     li.appendChild(deleteButton);
     ingredientList8cat1.appendChild(li);
   });
@@ -2876,7 +2958,7 @@ function addIngredient9cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient9delCat1(index) {
   ingredients9cat1.splice(index, 1);
   updateIngredientList9decat1();
   foodList9de1();
@@ -2892,7 +2974,7 @@ function updateIngredientList9decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient9delCat1(index);
     li.appendChild(deleteButton);
     ingredientList9cat1.appendChild(li);
   });
@@ -2958,7 +3040,7 @@ function addIngredient10cat1() {
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient10delCat1(index) {
   ingredients10cat1.splice(index, 1);
   updateIngredientList10decat1();
   foodList10de1();
@@ -2974,7 +3056,7 @@ function updateIngredientList10decat1() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient10delCat1(index);
     li.appendChild(deleteButton);
     ingredientList10cat1.appendChild(li);
   });
@@ -2991,7 +3073,88 @@ function foodList10de1() {
     });
 }
 
- 
+const cargarImagen1de2Button = document.getElementById('cargarImagen1cat2');
+const imageUrlInput1de2 = document.getElementById('imageUrlInput1Cat2');
+const imagen1Seccion1cat2 = document.getElementById('divDeEditar2com1').querySelector('img');
+const imagen1Seccion2cat2 = document.getElementById('food1cat2').querySelector('img');
+
+cargarImagen1de2Button.addEventListener('click', () => {
+    const imageUrl = imageUrlInput1de2.value;
+    if (imageUrl) {
+        imagen1Seccion1.src = imageUrl;
+        imagen1Seccion2cat2.src = imageUrl;
+        imagen1Seccion2cat2.parentElement.style.display = 'block';
+    }
+});
+
+
+function actualizarPrecio1Cat2() {
+    // Obtener el valor del input
+    var nuevoPrecio1de2 = document.getElementById("precioInput1Cat2").value;
+
+    // Actualizar solo la parte numérica de los elementos con clase 'precio'
+    document.getElementById("valor1Cat2").innerText = nuevoPrecio1de2;
+    document.getElementById("valor1Cat2Edit").innerText = nuevoPrecio1de2;
+}
+
+let inputPrecio1Cat2 = document.getElementById("precioInput1Cat2")
+
+function actualizarNombre1Cta2() {
+    // Obtener el valor del input
+    var nuevoNombre = document.getElementById("nombreInput1cat2").value;
+    // Actualizar solo la parte numérica de los elementos con clase 'Nombre'
+    document.getElementById("Nombre1Cat2").innerText = nuevoNombre;
+    document.getElementById("Nombre1Cat2Edit").innerText = nuevoNombre;
+}
+
+let inputNombre1Cat2 = document.getElementById("nombreInput1cat2")
+
+let ingredients1cat2 = [];
+
+function addIngredient1cat2() {
+  const ingredientInput1de2 = document.getElementById('ContentAlimento1cat2');
+  const ingredient1catal2 = ingredientInput1de2.value.trim();
+
+  if (ingredient1catal2 !== '') {
+    ingredients1cat2.push(ingredient1catal2);
+    updateIngredientList1paraCat2();
+    updateFoodList1de2();
+    ingredientInput1de2.value = '';
+  }
+}
+
+function deleteIngredient1delCat2(index) {
+  ingredients1cat2.splice(index, 1);
+  updateIngredientList1paraCat2();
+  updateFoodList1de2();
+}
+
+function updateIngredientList1paraCat2() {
+  const ingredientList = document.getElementById('ingredient-list1de2');
+  ingredientList.innerHTML = '';
+
+  ingredients1cat2.forEach((ingredient1catal2, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient1catal2} `;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
+    deleteButton.onclick = () => deleteIngredient1delCat2(index);
+    li.appendChild(deleteButton);
+    ingredientList.appendChild(li);
+  });
+}
+
+function updateFoodList1de2() {
+  const foodList1de2 = document.getElementById('food-list1cat2');
+  foodList1de2.innerHTML = '';
+
+  ingredients1cat2.forEach((ingredient1catal2) => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient1catal2}`;
+    foodList1de2.appendChild(li);
+  });
+}
 
 const cargarImagen2de2Button = document.getElementById('cargarImagen2cat2');
 const imageUrlInput2de2 = document.getElementById('imageUrlInput2Cat2');
@@ -3037,19 +3200,19 @@ function addIngredient2cat2() {
 
   if (ingredient2catal2 !== '') {
     ingredients2cat2.push(ingredient2catal2);
-    updateIngredientList();
+    updateIngredientList2paraCat2();
     updateFoodList2de2();
     ingredientInput2de2.value = '';
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient2delCat2(index) {
   ingredients2cat2.splice(index, 2);
-  updateIngredientList();
+  updateIngredientList2paraCat2();
   updateFoodList2de2();
 }
 
-function updateIngredientList() {
+function updateIngredientList2paraCat2() {
   const ingredientList = document.getElementById('ingredient-list2de2');
   ingredientList.innerHTML = '';
 
@@ -3059,7 +3222,7 @@ function updateIngredientList() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient2delCat2(index);
     li.appendChild(deleteButton);
     ingredientList.appendChild(li);
   });
@@ -3120,19 +3283,19 @@ function addIngredient3cat2() {
 
   if (ingredient3catal2 !== '') {
     ingredients3cat2.push(ingredient3catal2);
-    updateIngredientList();
+    updateIngredientList3paraCat2();
     updateFoodList3de2();
     ingredientInput3de2.value = '';
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient3delCat2(index) {
   ingredients3cat2.splice(index, 3);
-  updateIngredientList();
+  updateIngredientList3paraCat2();
   updateFoodList3de2();
 }
 
-function updateIngredientList() {
+function updateIngredientList3paraCat2() {
   const ingredientList = document.getElementById('ingredient-list3de2');
   ingredientList.innerHTML = '';
 
@@ -3142,7 +3305,7 @@ function updateIngredientList() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient3delCat2(index);
     li.appendChild(deleteButton);
     ingredientList.appendChild(li);
   });
@@ -3203,19 +3366,19 @@ function addIngredient4cat2() {
 
   if (ingredient4catal2 !== '') {
     ingredients4cat2.push(ingredient4catal2);
-    updateIngredientList();
+    updateIngredientList4paraCat2();
     updateFoodList4de2();
     ingredientInput4de2.value = '';
   }
 }
 
-function deleteIngredient(index) {
+function deleteIngredient4delCat2(index) {
   ingredients4cat2.splice(index, 4);
-  updateIngredientList();
+  updateIngredientList4paraCat2();
   updateFoodList4de2();
 }
 
-function updateIngredientList() {
+function updateIngredientList4paraCat2() {
   const ingredientList = document.getElementById('ingredient-list4de2');
   ingredientList.innerHTML = '';
 
@@ -3225,7 +3388,7 @@ function updateIngredientList() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Eliminar';
     deleteButton.classList.add('delete-button'); // Agregamos la clase delete-button
-    deleteButton.onclick = () => deleteIngredient(index);
+    deleteButton.onclick = () => deleteIngredient4delCat2(index);
     li.appendChild(deleteButton);
     ingredientList.appendChild(li);
   });
